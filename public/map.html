@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--====== METADATA =====-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map - UNCG EV</title>
+    <link rel="icon" href="images/favicon.png">
+
+    <!--- Meta SEO -->
+    <meta content="UNCG's EV" property="og:title" />
+    <meta content="#" property="og:url" />
+    <meta content="An EV charger locater for UNCG campus" property="og:description" />
+
+    <!-- Fonts & Styles -->
+    <link href='https://fonts.googleapis.com/css2?family=Poppins:wght@700' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css2?family=Poppins:wght@500' rel='stylesheet'>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/map-style.css">
+
+    <!-- Leaflet.js Styles -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+
+    <!-- Scripts -->
+    <script src="js/index.js" defer></script>
+    <script src="js/login.js" defer></script>
+    <script src="js/map.js" defer></script>
+    <script src="js/chat.js" defer></script>
+
+    <!-- External Scripts -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+</head>
+
+<!--===== PAGE CONTENT =====-->
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container"><a href="index.html"><img style="width:200px" src="images/uncg_hrzntl-svg.png"></a></div>
+        <hr class="gray">
+        <div class="container">
+            <h2><a class="white" href="index.html">UNCG EV</a></h2>
+            <div class="header-link">
+                <span><a href="map.html" class="white">Live Chat</a></span>
+                <span style="color:lightgray">|</span>
+                <span><a href="booking.html" class="white">My Bookings</a></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="welcome.html">HOME</a></li>
+            <li><a href="map.html">FIND A CHARGER</a></li>
+            <li><a href="booking.html">BOOK A CHARGER</a></li>
+            <li><a href="report-issue.html">REPORT ISSUE</a></li>
+            <li class="right"><a href="index.html">LOGOUT</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main -->
+    <main class="white-container" style="text-align:center">
+        <h2>FIND EV CHARGING STATIONS AT UNCG</h2>
+        <hr class="yellow">
+
+        <div class="content">
+            <div id="map"></div>
+
+            <div class="chat-container">
+                <div class="chat-window">
+                    <div id="messages"></div>
+                </div>
+                <div class="message-box">
+                    <input id="message-input" type="text" placeholder="Type a message..." />
+                    <button id="send-button">Send</button>
+                    <button id="clear-button">Clear</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <!--- Footer --->
+    <footer>
+        <p>&copy; UNCG EV 2025</p>
+    </footer>
+</body>
+
+</html>

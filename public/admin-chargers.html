@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--====== METADATA =====-->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Chargers - UNCG EV</title>
+    <link rel="icon" href="images/favicon.png">
+
+    <!--- Meta SEO -->
+    <meta content="UNCG's EV" property="og:title" />
+    <meta content="#" property="og:url" />
+    <meta content="An EV charger locater for UNCG campus" property="og:description" />
+
+    <!-- Google Fonts & Styles -->
+    <link href='https://fonts.googleapis.com/css2?family=Poppins:wght@700' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css2?family=Poppins:wght@500' rel='stylesheet'>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="css/maintenance.css">
+
+    <!-- Scripts -->
+    <script defer src="js/admin-chargers.js"></script>
+</head>
+
+<!--===== PAGE CONTENT =====-->
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container"><a href="index.html"><img style="width:200px" src="images/uncg_hrzntl-svg.png"></a></div>
+        <hr class="gray">
+        <div class="container">
+            <h2><a class="white" href="index.html">UNCG EV</a></h2>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="admin-dashboard.html">DASHBOARD</a></li>
+            <li><a href="admin-chargers.html">CHARGERS</a></li>
+            <li><a href="admin-maintenance.html">MAINTENANCE</a></li>
+            <li class="right"><a href="index.html">LOGOUT</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="white-container" class="content">
+
+        <h2>CHARGER MANAGEMENT
+            <span style="float: right;"><button id="addChargerBtn">+ Add New Charger</button></span>
+        </h2>
+        <hr class="yellow">
+
+        <!-- Charger List Table -->
+        <section class="chargers-list">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Location</th>
+                        <th>Status</th>
+                        <th>Last Serviced</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="chargersTable">
+                    <!-- Chargers will be loaded here dynamically -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <!-- Modal for Add/Edit Charger -->
+    <div id="chargerModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle">Add Charger</h2>
+            <form id="chargerForm">
+                <input type="hidden" id="chargerId"> <!-- Hidden field for editing -->
+
+                <label for="location">Location:</label>
+                <input type="text" id="location" required>
+
+                <label for="status">Status:</label>
+                <select id="status" required>
+                    <option value="available">Available</option>
+                    <option value="in_use">In Use</option>
+                    <option value="out_of_service">Out of Service</option>
+                </select>
+
+                <label for="lastServiced">Last Serviced Date:</label>
+                <input type="date" id="lastServiced" required>
+
+                <button type="submit">Save</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>

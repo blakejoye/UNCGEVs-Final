@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--====== METADATA =====-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - UNCG EV</title>
+    <link rel="icon" href="images/favicon.png">
+
+    <!--- Meta SEO -->
+    <meta content="UNCG's EV" property="og:title" />
+    <meta content="#" property="og:url" />
+    <meta content="An EV charger locater for UNCG campus" property="og:description" />
+
+    <!-- Google Fonts & Styles -->
+    <link href='https://fonts.googleapis.com/css2?family=Poppins:wght@700' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css2?family=Poppins:wght@500' rel='stylesheet'>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/admin.css">
+
+    <!-- Scripts -->
+    <script defer src="js/admin-dashboard.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<!--===== PAGE CONTENT =====-->
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container"><a href="index.html"><img style="width:200px" src="images/uncg_hrzntl-svg.png"></a></div>
+        <hr class="gray">
+        <div class="container">
+            <h2><a class="white" href="index.html">UNCG EV</a></h2>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="admin-dashboard.html">DASHBOARD</a></li>
+            <li><a href="admin-chargers.html">CHARGERS</a></li>
+            <li><a href="admin-maintenance.html">MAINTENANCE</a></li>
+            <li class="right"><a href="index.html">LOGOUT</a></li>
+        </ul>
+    </nav>
+
+    <!--- Page Content --->
+    <div class="white-container" class="main-content">
+        <div class="top-nav">
+            <h2>ADMIN DASHBOARD</h2>
+            <hr class="yellow">
+        </div>
+
+        <div class="dashboard">
+            <div class="dashboard-cards">
+                <div class="card">
+                    <p id="activeChargersCount">Loading...</p>
+                    <p>Active Chargers</p>
+                </div>
+                <div class="card">
+                    <p id="upcomingReservationsCount">Loading...</p>
+                    <p>Upcoming Reservations</p>
+                </div>
+                <div class="card">
+                    <p id="reportedIssuesCount">Loading...</p>
+                    <p>Reported Issues</p>
+                </div>
+                <div class="card">
+                    <p id="openTicketsCount">Loading...</p>
+                    <p>Open Tickets</p>
+                </div>
+                <div class="card">
+                    <p id="registeredUsersCount">Loading...</p>
+                    <p>Registered Users</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Maintenance Report Status</h3>
+                <canvas id="maintenanceStatusChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <!--- Footer --->
+    <footer>
+        <p>&copy; UNCG EV 2025</p>
+    </footer>
+
+</body>
+
+</html>

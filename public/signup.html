@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--====== METADATA =====-->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up - UNCG EV</title>
+    <link rel="icon" href="images/favicon.png">
+    
+    <!--- Meta SEO -->
+    <meta content="UNCG EV" property="og:title" />
+    <meta content="#" property="og:url" />
+    <meta content="An EV charger locater for UNCG campus" property="og:description" />
+
+    <!-- Fonts & Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login.css"/>
+    <link href='https://fonts.googleapis.com/css2?family=Poppins:wght@700' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css2?family=Poppins:wght@500' rel='stylesheet'>
+   
+    <!-- Scripts -->
+    <script src="js/signup.js" defer></script>
+</head>
+
+<!--===== PAGE CONTENT =====-->
+
+<body>
+
+    <!--- Header --->
+    <header>
+        <div class="container"><a href="index.html"><img style="width:200px" src="assets/uncg_hrzntl-svg.png"></a></div>
+        <hr class="gray">
+        <div class="container">
+            <h2><a class="white" href="index.html">UNCG EV</a></h2>
+        </div>
+    </header>
+
+    <!--- Navbar -->
+    <nav>
+        <ul>
+            <li><a href="#">WELCOME</a></li>
+        </ul>
+    </nav>
+
+    <!--- Page Content --->
+    <main class="white-container">
+        <div id="signup-form-container">
+            <h2>CREATE AN ACCOUNT</h2>
+            <hr class="yellow">
+        
+            <form id="signup-form">
+                <input type="text" id="username" name="username" placeholder="Username" required />
+                <input type="email" id="email" name="email" placeholder="Email" required />
+                <input type="password" id="password" name="password" placeholder="Password" required />
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password" required />
+        
+                <button type="submit" class="signup-btn">Sign Up</button>
+            </form>
+        
+            <p id="error-message" style="color: red; display: none;"></p>
+            <p>Already have an account? <a href="index.html"><u>Login</u></a></p>
+        </div>
+    </main>
+
+    <!--- Footer --->
+    <footer>
+        <p>&copy; UNCG EV 2025</p>
+    </footer>
+</body>
+
+</html>

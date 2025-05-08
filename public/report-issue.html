@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--====== METADATA =====-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Issue - UNCG EV’s</title>
+    <link rel="icon" href="images/favicon.png">
+
+    <!--- Meta SEO -->
+    <meta content="UNCG's EV" property="og:title" />
+    <meta content="#" property="og:url" />
+    <meta content="An EV charger locater for UNCG campus" property="og:description" />
+
+    <!-- Google Fonts & Styles -->
+    <link href='https://fonts.googleapis.com/css2?family=Poppins:wght@700' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css2?family=Poppins:wght@500' rel='stylesheet'>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login.css">
+
+    <!-- Scripts -->
+    <script src="js/report-issue.js" defer></script>
+    <link rel="icon" href="">
+</head>
+
+<!--===== PAGE CONTENT =====-->
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container"><a href="index.html"><img style="width:200px" src="images/uncg_hrzntl-svg.png"></a></div>
+        <hr class="gray">
+        <div class="container">
+            <h2><a class="white" href="index.html">UNCG EV</a></h2>
+            <div class="header-link">
+                <span><a href="map.html" class="white">Live Chat</a></span>
+                <span style="color:lightgray">|</span>
+                <span><a href="booking.html" class="white">My Bookings</a></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="welcome.html">HOME</a></li>
+            <li><a href="map.html">FIND A CHARGER</a></li>
+            <li><a href="booking.html">BOOK A CHARGER</a></li>
+            <li><a href="issue_report.html">REPORT ISSUE</a></li>
+            <li class="right"><a href="index.html">LOGOUT</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="white-container">
+        <h2>REPORT A CHARGER ISSUE</h2>
+        <hr class="yellow">
+
+        <p class="description">
+            If you experience any issues with a charger, please report it below. Our team will review and resolve the
+            issue as soon as possible.
+        </p>
+
+        <!-- Report Form -->
+        <form id="reportForm">
+            <label for="chargerId">Select Charger:</label>
+            <select id="chargerId" required>
+                <option value="">Loading chargers...</option>
+            </select>
+            <br>
+            <label for="reportedBy">Reported By:</label>
+            <input type="text" id="reportedBy" >
+
+            <label for="issueDescription">Issue Description:</label>
+            <textarea id="issueDescription" required></textarea>
+
+            <button type="submit" class="report-btn">Submit Report</button>
+        </form>
+
+        <p id="reportMessage" class="hidden"></p>
+
+    </main>
+
+    <!--- Footer --->
+    <footer>
+        <p>&copy; UNCG EV 2025</p>
+    </footer>
+</body>
+
+</html>
